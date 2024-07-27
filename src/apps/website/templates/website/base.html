@@ -1,0 +1,91 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>
+        {% block title %}
+        OmniServe Solutions |
+            {% block subtitle %}
+                Your all solutions
+            {% endblock %}
+        {% endblock %}
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'core/images/logos/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'website/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/meanmenu.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/font/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'website/vendor/slider/css/nivo-slider.css' %}">
+    <link rel="stylesheet" href="{% static 'website/vendor/OwlCarousel/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/vendor/OwlCarousel/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/select2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/jquery.datetimepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'website/style.css' %}">
+    <script src="{% static 'website/js/modernizr-3.7.1.min.js' %}"></script>
+
+    {% block css %}
+
+    {% endblock %}
+
+</head>
+
+<body class="sticky-header">
+
+{% block only-body %}
+
+    {% include 'website/include/extras_top.html' %}
+    <div id="wrapper" class="wrapper">
+        <!-- Add your site or application content here -->
+
+        {# HEADER #}
+        {% include 'website/include/header.html' %}
+
+        {# DATA/BODY #}
+        {% block content %}
+
+        {% endblock %}
+
+        {# FOOTER #}
+        {% include 'website/include/footer.html' %}
+
+    </div>
+
+{% endblock %}
+
+<script src="{% static 'website/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'website/js/plugins.js' %}"></script>
+<script src="{% static 'website/js/popper.min.js' %}"></script>
+<script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'website/js/jquery.meanmenu.min.js' %}"></script>
+<script src="{% static 'website/vendor/slider/js/jquery.nivo.slider.js' %}"></script>
+<script src="{% static 'website/vendor/slider/home.js' %}"></script>
+<script src="{% static 'website/vendor/OwlCarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'website/js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'website/js/waypoints.min.js' %}"></script>
+<script src="{% static 'website/js/validator.min.js' %}"></script>
+<script src="{% static 'website/js/select2.min.js' %}"></script>
+<script src="{% static 'website/js/jquery.datetimepicker.full.min.js' %}"></script>
+<script src="{% static 'website/js/main.js' %}"></script>
+
+{% include 'messages.html' %}
+
+{% block js %}
+
+{% endblock %}
+
+</body>
+</html>
+
+{% block code %}
+
+{% endblock %}

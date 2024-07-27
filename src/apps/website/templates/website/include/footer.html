@@ -1,0 +1,64 @@
+{% load static %}
+
+<footer class="footer-wrap-layout1 section-shape1">
+    <div class="container">
+        <div class="footer-top-box">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="footer-box-layout1">
+                        <div class="footer-title">
+                            <h4>Lets Start</h4>
+                        </div>
+                        <div class="footer-menu-box">
+                            <ul class="footer-menu-list">
+                                <li><a href="{% url 'website:contact' %}">Hire Us</a></li>
+                                <li><a href="{% url 'website:contact' %}">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="footer-box-layout1">
+                        <div class="footer-title">
+                            <h4>Quick Links</h4>
+                        </div>
+                        <div class="footer-menu-box">
+                            <ul class="footer-menu-list">
+                                <li><a href="{% url 'website:home' %}">Home</a></li>
+                                <li><a href="{% url 'website:services' %}">Services</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="footer-box-layout1">
+                        <div class="footer-title">
+                            <h4>About US</h4>
+                        </div>
+                        <div class="footer-menu-box">
+                            <p style="color:white;">
+                                All General Cleaning Services is comitted to exceeding expectations and exceeding standards. 
+                                Veteran-owned, DBS vetted, and committed to 100% customer satisfaction. 
+                                Experience the difference with AGS today!
+                            </p>
+                            <a href="{% url 'website:contact' %}" class="contact-btn">
+                                <i class="far fa-envelope"></i>HAVE ANY QUESTION
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom-box">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copyright">
+                        Copyright 2023 - {% now 'Y' %} <a href="website:home" class="text-warning"><b>OmniServe Solutions</b></a> -
+                        All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

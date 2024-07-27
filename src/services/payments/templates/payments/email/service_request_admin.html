@@ -1,0 +1,22 @@
+{% extends 'whisper/base.html' %}
+
+{% block content %}
+    Dear Admin,
+
+
+    <p>Congratulations! a new service request has been arrived</p>
+    <p>Kindly check the requests in administration you will find some quick details below</p>
+
+    <p><strong>Request Details:</strong></p>
+    <ul>
+        <li><strong>ID:</strong> {{ obj.id }}</li>
+        <li><strong>Client:</strong> {{ obj.name }}</li>
+        <li><strong>Email:</strong> {{ obj.email }}</li>
+        <li><strong>Phone:</strong> {{ obj.phone }}</li>
+        <li><strong>address:</strong> {{ obj.address }}</li>
+        <li><strong>City:</strong> {{ obj.city.name }} - {{ obj.country.name }}</li>
+        <li><strong>Created:</strong> {{ obj.city.created_on }}</li>
+    </ul>
+    <p>Best regards,<br>AGS Clean</p>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'whisper/base.html' %}
+
+{% block content %}
+    Dear {{ obj }},
+
+
+    <p>Congratulations! Your service request has been created successfully.</p>
+    <p>Thank you for choosing our platform. You can now log in with your credentials and access your account.</p>
+    <p>If you have any questions or need assistance, please feel free to reach out to us.</p>
+
+    <p><strong>Request Details:</strong></p>
+    <ul>
+        <li><strong>ID:</strong> {{ obj.id }}</li>
+        <li><strong>address:</strong> {{ obj.address }}</li>
+        <li><strong>City:</strong> {{ obj.city.name }} - {{ obj.country.name }}</li>
+    </ul>
+    <p>Thanks for your patience you will receive the service on scheduled time</p>
+    <p>Best regards,<br>AGS Clean</p>
+
+{% endblock %}

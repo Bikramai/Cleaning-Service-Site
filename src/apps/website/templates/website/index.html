@@ -1,0 +1,376 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    {# SLIDER #}
+    <div class="slider-area slider-layout1">
+        <div class="bend niceties preview-1">
+            <div id="ensign-nivoslider-4" class="slides">
+                <img src="{% static 'website/img/slider/slide5-4.jpg' %}" alt="slider" title="#slider-direction-2"/>
+                <img src="{% static 'website/img/slider/slide1-2.jpg' %}" alt="slider" title="#slider-direction-1"/>
+                <img src="{% static 'website/img/slider/slide5-1.jpg' %}" alt="slider" title="#slider-direction-3"/>
+            </div>
+            <div id="slider-direction-1" class="t-cn slider-direction">
+                <div class="slider-content s-tb slide-1">
+                    <div class="text-left title-container s-tb-c">
+                        <div class="container">
+                            <div style ="color:white;" class="slider-sub-text">Cleaning made easy, with OmniServe!</div>
+                            <h1 class="slider-big-text">Certified Company</h1>
+                            <div  class="slider-paragraph">Tired of dust bunnies and grimy grime? Let OmniServe conquer
+                                the chaos and bring your home back to sparkling life.
+
+                            </div>
+                            <div class="slider-btn-area">
+                                <a href="{% url 'website:services' %}" class="item-btn-fill">Take Our Service
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slider-direction-2" class="t-cn slider-direction">
+                <div class="slider-content s-tb slide-2">
+                    <div class="text-left title-container s-tb-c">
+                        <div class="container">
+                            <div class="slider-sub-text" style="color: white; padding-bottom:15px;">For expert roofing and fencing services, OmniServe is the right team!</div>
+                            <h1 class="slider-big-text">Professional Team</h1>
+                            <div class="slider-paragraph" style="color:white;">
+                                We're not just any roofing and fencing company –
+                                we're your dedicated team of experts, ready to 
+                                transform your space with quality roofing and fencing solutions.
+                            </div>
+                            <div class="slider-btn-area">
+                                <a href="{% url 'website:services' %}" class="item-btn-fill">Take Our Service
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slider-direction-3" class="t-cn slider-direction">
+                <div class="slider-content s-tb slide-3">
+                    <div class="text-left title-container s-tb-c">
+                        <div class="container">
+                            <div class="slider-sub-text" >Schedule today and leave your hassle to us</div>
+                            <h1 class="slider-big-text">Quality Service</h1>
+                            <div class="slider-paragraph" >When it comes to your home or workspace, you deserve the best. 
+                                At OmniServe, we provide hassle-free general services for all types of house chores even gardening, so you can 
+                                focus on what matters most to you
+                            </div>
+                            <div class="slider-btn-area">
+                                <a href="{% url 'website:services' %}" class="item-btn-fill">Take Our Service
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- About Us Area Start Here -->
+    <section class="section-bubble section-padding-md-2">
+        <div class="container">
+            <div class="row gutters-50 d-flex align-items-center">
+                <div class="col-xl-7">
+                    <div class="about-box-layout3">
+                        <div class="item-icon shape1">
+                            <img src="{% static 'website/img/figure/icon-shape1.png' %}" alt="shape">
+                        </div>
+                        <div class="item-icon shape2">
+                            <img src="{% static 'website/img/figure/icon-shape2.png' %}" alt="shape">
+                        </div>
+                        <div class="item-icon shape3">
+                            <img src="{% static 'website/img/figure/icon-shape3.png' %}" alt="shape">
+                        </div>
+                        <div class="item-icon shape4">
+                            <img src="{% static 'website/img/figure/icon-shape4.png' %}" alt="shape">
+                        </div>
+                        <div class="item-img">
+                            <img src="{% static 'website/img/figure/figure5.png' %}" alt="img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5">
+                    <div class="about-box-layout4">
+                        
+                        <h2 class="item-title">
+                            One simple aim at Omni, <br>
+                            Customer Satisfaction!
+                        </h2>
+                        <p> 
+                            OmniServe is a veteran owned company who pride themselves on giving only the best service to our clients to ensure 
+                            that they are 100% satisfied with the work that has been completed. Their integrity, honesty and hardworking is second to none. 
+                        </p>
+
+                        <p>
+                            <strong>Values & Standards:</strong> <br>
+                             We set our standards high, whilst keeping our costs low, which then allows 
+                             for our excellent standards to remain the same throughout our careers to date.
+                                
+                        </p>
+
+                        <div class="service-list">
+                            <ul>
+                                <li>
+                                    <strong>Our Goal </strong> is  to become the best in the industry, whilst maintaining our same core values from day one.
+                                </li>
+                                <li>
+                                    <strong>DBS Vetted </strong>All our staff will be DBS vetted to ensure peace of mind when working on your property.
+                                </li>
+                                <li>
+                                    <strong>Consistently Exceeding Expectations</strong> that consistently surpasses your expectations.
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="action-area">
+                            <a href="{% url 'website:contact' %}"
+                               class="btn-fill-sm bg-accent text-primarytext btn-slide-hover">Book a Service<i
+                                    class="fas fa-angle-right"></i></a>
+                            <div class="phone-number"><i class="flaticon-phone-call"></i><a
+                                    href="tel:+449769793298">+44 9414 7853432459</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Us Area End Here -->
+
+    <!-- Banner Area Start Here -->
+    <section class="banner-wrap-layout2" data-bg-image="">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-6 col-12">
+                    <div class="banner-box-layout4">
+                        <h2 class="item-title text-Primary">Together <span>We'll Explore</span> New Things</h2>
+                        <a href="{% url 'website:contact' %}"
+                           class="btn-fill-md bg-accent btn-slide-hover text-primarytext">
+                            Book an Appointment<i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="banner-box-layout5">
+                        <div class="item-icon shape1">
+                            <img src="{% static 'website/img/figure/icon-shape4.png' %}" alt="shape">
+                        </div>
+                        <div class="item-icon shape2">
+                            <img src="{% static 'website/img/figure/icon-shape3.png' %}" alt="shape">
+                        </div>
+                        <div class="item-icon shape3">
+                            <img src="{% static 'website/img/figure/icon-shape2.png' %}" alt="shape">
+                        </div>
+                        <div class="item-icon shape4">
+                            <img src="{% static 'website/img/figure/icon-shape1.png' %}" alt="shape">
+                        </div>
+                        <div class="item-img">
+                            <img src="{% static 'website/img/figure/banner-figure.png' %}" alt="figure">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Area End Here -->
+
+    
+    <section class="section-padding-lg-3 section-bubble">
+        <div class="container">
+            <div class="heading-layout1">
+                <h2>Meet Our Expert Services Team!</h2>
+                <p>
+                    Rest assured, all our staff are DBS vetted to ensure peace of mind when working on your property.
+                    For more information, please check out their personal bios below.
+                </p>
+            </div>
+            <div class="row">
+                <!-- Team Member 1 Area Start -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="team-box-layout1">
+                        <div class="item-img">
+                            <img src="{% static 'website/img/team/team1.png' %}" alt="Karl's photo">
+                        </div>
+                        <div class="item-content">
+                            <h3 class="item-title">Mike</h3>
+                            <div class="item-subtitle">
+                                    <p id="karlBio" class="text-justify collapsed" data-toggle="collapse" href="#collapseKarlBio" aria-expanded="false" aria-controls="collapseKarlBio">
+                                    Mike brings over 18 years of dedicated service in the Army, 
+                                    during which he completed several operational tours across the globe.
+                                    </p>
+                                <div class="collapse" id="collapseKarlBio">
+                                    <p class="text-justify">
+                                    With a deep understanding of the importance of communication and maintaining
+                                    an impeccable work ethic, Mike ensures that OmniServe Solutions standards are unparalleled. 
+                                    His commitment to excellence is evident in his approach to client interactions, 
+                                    where he prioritizes clear and consistent communication. Karl's dedication to 
+                                    maintaining the highest standards and seeing every job through to completion sets him apart, 
+                                    ensuring exceptional outcomes for every project.
+                                    </p>
+                                </div>
+                                    <button class="btn btn-primary btn-lg" id="showKarlBio">View More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 1 Area End -->
+            </div>
+        </div>
+    </section>
+    <!-- Team Area End Here -->
+
+    <!-- Call To Action Area Start Here -->
+    <section class="action-wrap-layout1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="action-box-layout1">
+                        <h2 class="item-title">Get started with your free estimate</h2>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="action-box-layout1">
+                        <div class="item-img bottom-bubble" style="padding-left: 200px;">
+                            <img src="{% static 'website/img/figure/figure4.png' %}" alt="img">
+                        </div>
+                        <a href="{% url 'website:contact' %}" class="btn-fill-md hover-textprimary bg-accent text-primarytext">Get an Estimate<i
+                                class="fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Call To Action Area End Here -->
+
+    <!-- Progress Area Start Here -->
+    <section class="progress-wrap-layout1 section-padding-12">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-8 col-12">
+                    <div class="progress-box-layout1">
+                        <h2 class="item-title">All of our Specialists are Fully Trained</h2>
+                        <div class="item-content">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="counter-item">
+                                        <div class="counter count-number" data-num="1020">1020</div>
+                                        <div class="count-title">Project Done</div>
+                                        <div class="bg-icon"><i class="far fa-thumbs-up"></i></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="counter-item">
+                                        <div class="counter count-number" data-num="800">800</div>
+                                        <div class="count-title">Happy Clients</div>
+                                        <div class="bg-icon"><i class="far fa-smile"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Progress Area End Here -->
+
+    <!-- Testimonial Area Start Here -->
+    <section class="section-padding-md-4 bg-Primary bg-common" data-bg-image="img/figure/bg-shape.png' %}">
+        <div class="container">
+            <div class="heading-layout2 mg-b-30">
+                <h2 class="text-white">What’s Client’s Say<span>About Us</span></h2>
+            </div>
+            <div class="rc-carousel nav-control-layout1" data-loop="true" data-items="10" data-margin="30"
+                 data-autoplay="false" data-autoplay-timeout="3000" data-smart-speed="1000" data-dots="false"
+                 data-nav="true" data-nav-speed="false" data-r-x-small="1" data-r-x-small-nav="true"
+                 data-r-x-small-dots="false" data-r-x-medium="1" data-r-x-medium-nav="true" data-r-x-medium-dots="false"
+                 data-r-small="1" data-r-small-nav="true" data-r-small-dots="false" data-r-medium="2"
+                 data-r-medium-nav="true" data-r-medium-dots="false" data-r-large="3" data-r-large-nav="true"
+                 data-r-large-dots="false" data-r-extra-large="3" data-r-extra-large-nav="true"
+                 data-r-extra-large-dots="false">
+                <div class="testimonial-box-layout1">
+                    <p>From skeptical husband to Spa convert! Now, we both look forward to their visits and the
+                        effortless clean they leave behind.</p>
+                    <h3 class="item-title">Mike Joes</h3>
+                    <ul class="item-rating">
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                    </ul>
+                    <div class="item-quote"><i class="fas fa-quote-right"></i></div>
+                </div>
+                <div class="testimonial-box-layout1">
+                    <p>Managing my Air B&B property has never been easier since I started using their services. They take care of everything, leaving me worry-free.</p>
+                    <h3 class="item-title">Sarah K</h3>
+                    <ul class="item-rating">
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                    </ul>
+                    <div class="item-quote"><i class="fas fa-quote-right"></i></div>
+                </div>
+                <div class="testimonial-box-layout1">
+                    <p>They did an excellent job with the installation and repair of fences for my property boundaries. Professional service and great results!</p>
+                    <h3 class="item-title">Bobby John</h3>
+                    <ul class="item-rating">
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                    </ul>
+                    <div class="item-quote"><i class="fas fa-quote-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Area End Here -->
+
+{% endblock %}
+
+{% block js %}
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        var karlBio = document.getElementById("karlBio");
+        var showKarlBioButton = document.getElementById("showKarlBio");
+        showKarlBioButton.addEventListener("click", function() {
+            karlBio.classList.toggle("collapsed");
+            var collapseKarl = document.getElementById("collapseKarlBio");
+            if (collapseKarl.classList.contains("show")) {
+                collapseKarl.classList.remove("show");
+                showKarlBioButton.innerText = "View More";
+            } else {
+                collapseKarl.classList.add("show");
+                showKarlBioButton.innerText = "Hide Details";
+            }
+        });
+
+        var stevenBio = document.getElementById("stevenBio");
+        var showStevenBioButton = document.getElementById("showStevenBio");
+        showStevenBioButton.addEventListener("click", function() {
+            stevenBio.classList.toggle("collapsed");
+            var collapseSteven = document.getElementById("collapseStevenBio");
+            if (collapseSteven.classList.contains("show")) {
+                collapseSteven.classList.remove("show");
+                showStevenBioButton.innerText = "View More";
+            } else {
+                collapseSteven.classList.add("show");
+                showStevenBioButton.innerText = "Hide Details";
+            }
+        });
+    });
+</script>
+{% endblock %}

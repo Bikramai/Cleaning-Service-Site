@@ -1,0 +1,104 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block subtitle %}
+    Services
+{% endblock %}
+
+{% block content %}
+
+<section class="inner-page-banner bg-common" data-bg-image="{% static 'website/img/figure/about2.jpg' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumbs-area">
+                    <h1>{{object.category.name}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Single Service Area Start Here -->
+<section class="section-padding-12">
+
+    <div class="container">
+
+        <div class="row">
+            
+            <div class="col-lg-8">
+                <div class="single-service-box-layout1">
+                    <div class="service-content">
+                        <div class = "why-choose">
+                            {% if object.content %}
+                            {{object.content | safe}}
+                            {% endif %}
+                        </div>
+                        <div class="service-more-content">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="item-img">
+                                        
+                                        {% if object.image %}
+                                            <img src="{{object.image.url}}" alt="thumb">
+                                        {% else %}
+                                        <img src="https://placehold.co/400" alt="thumb">
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-6">
+                                    <div class="item-content">
+                                        <h3 class="item-title">Experienced People can help you more.</h3>
+                                        <p>
+                                            We stand out as the best choice due to our unparalleled commitment to customer satisfaction. 
+                                            With a focus on quality, reliability, and efficiency, AGS delivers exceptional service every time. 
+                                            Our dedicated team and attention to detail ensure that every project is completed to the highest 
+                                            standards, making us the top choice for all general services needs.
+                                        </p>
+                                        <ul class="item-feature">
+                                            <li>Eco-friendly Practices</li>
+                                            <li>Innovative Solutions</li>
+                                            <li>Quality Assurance</li>
+                                            <li>Hassle-Free Job Done</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 sidebar-break-md sidebar-widget-area">
+                <div class="widget widget-category">
+                    <div class="heading-layout4">
+                        <h4>Other Services</h4>
+                    </div>
+                    {% for service in other_services %}
+                    <div class="category-list">
+                        <ul>
+                            <li>
+                                <a href="{% url 'website:services_detail' service.pk %}"><i class="flaticon-right-arrow"></i>{{ service.name }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                <div class="widget widget-banner">
+                    <div class="item-img">
+                        <img src="{% static 'website/img/figure/about2.jpg' %}" alt="banner">
+                    </div>
+                    <div class="item-content">
+                        <h2 class="item-title"><span>Contact</span></h2>
+                        <div class="item-subtitle">To Get A free Quote</div>
+                        <a href="{% url 'website:contact' %}" class="fw-btn-fill bg-accent text-primarytext">Contact With US</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

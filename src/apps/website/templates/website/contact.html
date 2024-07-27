@@ -1,0 +1,133 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block subtitle %}
+    Contact Us
+{% endblock %}
+
+{% block content %}
+
+    <section class="inner-page-banner bg-common" data-bg-image="{% static 'banner.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumbs-area">
+                        <h1>Contact Us</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding-12-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="contact-box-layout1">
+                        <div class="google-map-area">
+                            <div id="googleMap">
+                                {{ map|safe }}
+                            </div>
+                        </div>
+
+                        <div class="contact-info mt-4">
+                            <div class="media media-none-lg media-none--sm">
+                                <div class="item-icon">
+                                    <svg width="30" height="30" fill="blue" class="bi bi-person" viewBox="0 0 16 16">
+                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                                      </svg>
+                                </div>
+                                <div class="media-body space-md">
+                                    <h4>Mike</h4>
+                                    <ul>
+                                        <li>
+                                            074365678260
+                                        </li>
+                                        <li>
+                                            United Kingdom
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="media media-none-lg media-none--sm">
+                                <div class="item-icon">
+                                    <i class="flaticon-maps-and-flags"></i>
+                                </div>
+                                <div class="media-body space-md">
+                                    <h4>Location:</h4>
+                                    <ul>
+                                        <li>{{ app.address }}</li>
+                                        <li>{{ app.latitude }} - {{ app.longitude }}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 sidebar-break-md sidebar-widget-area">
+                    <div class="widget widget-contact-form">
+                        <div class="heading-layout4">
+                            <h4>Have you Any Question?</h4>
+                        </div>
+                        <form class="contact-form-box" method="post" action="{% url 'website:contact-create' %}">
+                            {% csrf_token %}
+                            <div class="row">
+
+                                <div class="col-12 form-group">
+                                    <div class="form-icon"><i class="fas fa-user"></i></div>
+                                    <input type="text" placeholder="Name" class="form-control" name="name" id="name"
+                                           data-error="Name field is required">
+                                    {% if form.errors.name %}
+                                        <div class="help-block with-errors mb-2 text-danger">
+                                            {{ form.errors.name.0 }}
+                                        </div>
+                                    {% endif %}
+                                </div>
+
+                                <div class="col-12 form-group">
+                                    <div class="form-icon"><i class="far fa-envelope"></i></div>
+                                    <input type="email" placeholder="E-mail Address" class="form-control" name="email"
+                                           id="name"
+                                           data-error="email field is required">
+                                    {% if form.errors.email %}
+                                        <div class="help-block with-errors mb-2 text-danger">
+                                            {{ form.errors.email.0 }}
+                                        </div>
+                                    {% endif %}
+                                </div>
+
+                                <div class="col-12 form-group">
+                                    <div class="form-icon"><i class="fas fa-phone-volume"></i></div>
+                                    <input type="text" placeholder="Phone" class="form-control" name="phone_number"
+                                           id="phone_number"
+                                           data-error="Phone field is required">
+                                    {% if form.errors.phone_number %}
+                                        <div class="error mb-2 text-danger">{{ form.errors.phone_number.0 }}</div>
+                                    {% endif %}
+                                </div>
+
+                                <div class="col-12 form-group">
+                                    <div class="form-icon"><i class="far fa-comments"></i></div>
+                                    <textarea placeholder="Address" class="textarea form-control" name="message"
+                                              id="message" rows="4" cols="20"
+                                              data-error="Message field is required"></textarea>
+                                    {% if form.errors.message %}
+                                        <div class="error mb-2 text-danger">{{ form.errors.message.0 }}</div>
+                                    {% endif %}
+                                </div>
+
+                                <div class="col-12 form-group">
+                                    <button type="submit" class="fw-btn-fill bg-accent text-primarytext">Send Message
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-response"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+

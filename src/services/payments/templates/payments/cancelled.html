@@ -1,0 +1,34 @@
+{% extends 'website/base.html' %}
+
+{% block subtitle %}
+    Payments Cancelled
+{% endblock %}
+
+{% block only-body %}
+    <div class="container-fluid my-5">
+        <div class="row my-4 justify-content-center">
+            <div class="col-sm-6 my-4 text-center">
+
+                <h1 class="text-danger">
+                    <i class="fa fa-check-circle"></i>
+                </h1>
+                <h2 class="text-danger mb-0">
+                    <b>Payments Cancelled</b>
+                </h2>
+                <p class="mb-4">
+                   Your payments are cancelled or denied
+                </p>
+
+                <p class="mb-0">
+                    <b>
+                        <a class="/">
+                            <i class="fa fa-arrow-circle-left"></i>
+                            Back to Website
+                        </a>
+                    </b>
+                </p>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
